@@ -6,5 +6,6 @@
     <string name="green">Зелёный</string>
     <string name="blue">Синий</string>
     <string name="color">Цвет</string>
+    <string name="toast">Тост</string>
     <string name="exit">Выход</string>
 </resources>

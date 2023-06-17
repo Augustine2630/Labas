@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     private Button lab2;
     private Button buttonNotif;
 
+    private Button button4;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
         lab2.setOnClickListener(v -> openNewActivityLab2());
         buttonNotif.setOnClickListener(v -> openNewActivityLab3());
         buttonNotif.setText("LAB 3");
+        button4 = findViewById(R.id.button5);
+        button4.setText("LAB 4");
+        button4.setOnClickListener(v -> openNewActivityLab4());
     }
 
     public void openNewActivity() {
@@ -43,8 +48,12 @@ public class MainActivity extends AppCompatActivity {
     public void openNewActivityLab3() {
         Intent intent = new Intent(this, NotificationActivity.class);
         startActivity(intent);
-        finish();
     }
+    public void openNewActivityLab4() {
+        Intent intent = new Intent(this, FirstActivity.class);
+        startActivity(intent);
+    }
+
 
     @Override
     protected void onNewIntent(Intent intent) {

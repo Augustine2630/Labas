@@ -2,6 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <supports-gl-texture android:name="GL_AMD_compressed_ATC_texture" />
+    <supports-gl-texture android:name="GL_ATI_texture_compression_atitc" />
+    <supports-gl-texture android:name="GL_IMG_texture_compression_pvrtc" />
+    <supports-gl-texture android:name="GL_EXT_texture_compression_s3tc" />
+    <supports-gl-texture android:name="GL_EXT_texture_compression_dxt1" />
+    <supports-gl-texture android:name="GL_AMD_compressed_3DC_texture" />
+    <supports-gl-texture android:name="GL_OES_compressed_ETC1_RGB8_texture" />
+    <supports-gl-texture android:name="GL_OES_compressed_paletted_texture" />
+
     <uses-feature
         android:name="android.hardware.telephony"
         android:required="false" />
@@ -9,6 +18,11 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature
+        android:glEsVersion="0x00030001"
+        android:required="true" />
+
     <uses-permission
         android:name="android.permission.CAPTURE_AUDIO_HOTWORD"
         tools:ignore="ProtectedPermissions" />
@@ -23,6 +37,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="31">
+        <activity
+            android:name=".OpenGL"
+            android:exported="false" />
+        <activity
+            android:name=".Rotating"
+            android:exported="false" />
+        <activity
+            android:name=".Shape2D"
+            android:exported="false" />
         <activity
             android:name=".MultiTouchActivity"
             android:exported="false" />

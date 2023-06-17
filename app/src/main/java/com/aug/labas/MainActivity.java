@@ -16,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
     private Button button4;
 
     private Button lab5;
+    private Button lab6;
+    private Button lab7;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +34,16 @@ public class MainActivity extends AppCompatActivity {
         lab2.setOnClickListener(v -> openNewActivityLab2());
         buttonNotif.setOnClickListener(v -> openNewActivityLab3());
         buttonNotif.setText("LAB 3");
-        button4 = findViewById(R.id.button5);
+        button4 = findViewById(R.id.button7);
         button4.setText("LAB 4");
         button4.setOnClickListener(v -> openNewActivityLab4());
         lab5.setText("LAB 5");
         lab5.setOnClickListener(v -> openNewActivityLab5());
+        lab6 = findViewById(R.id.lab6);
+        lab6.setText("LAB 6");
+        lab6.setOnClickListener(v -> openNewActivityLab6());
+        lab7 = findViewById(R.id.lab7);
+        lab7.setOnClickListener(v -> openNewActivityLab7());
     }
 
     public void openNewActivity() {
@@ -62,6 +70,15 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void openNewActivityLab6() {
+        Intent intent = new Intent(this, Shape2D.class);
+        startActivity(intent);
+    }
+
+    public void openNewActivityLab7() {
+        Intent intent = new Intent(this, OpenGL.class);
+        startActivity(intent);
+    }
 
     @Override
     protected void onNewIntent(Intent intent) {

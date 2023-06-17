@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         lab6.setText("LAB 6");
         lab6.setOnClickListener(v -> openNewActivityLab6());
         lab7 = findViewById(R.id.lab7);
+        lab7.setText("LAB 7");
         lab7.setOnClickListener(v -> openNewActivityLab7());
     }
 
